@@ -1,0 +1,598 @@
+/* 
+==============================
+            body
+============================== 
+*/
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #C4A484;
+    font-weight: bold;
+}
+
+body {
+    color: #5C5C5C;
+    size: 1rem;
+}
+
+/* 
+==============================
+            header
+==============================
+ */
+#header {
+    display: flex;
+    height: 147px;
+    background-color: #FFF4E0;
+    justify-content: space-between;
+    position: relative;
+}
+
+h1 {
+    margin: 0 auto;
+}
+
+h1 img {
+    max-height: 100%;
+}
+
+.sns {
+    display: flex;
+    position: absolute;
+    right: 3%;
+    padding-bottom: 30px;
+}
+
+.sns li {
+    padding: 105px 10px 0px;
+}
+
+
+.sns li img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* 
+=============================
+            main
+=============================
+ */
+/* 
+-------------------------------
+            fade
+------------------------------- 
+*/
+.fade {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.fade li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fade 25s infinite;
+}
+
+.fade li img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fade li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.fade li:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.fade li:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.fade li:nth-child(5) {
+    animation-delay: 20s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 
+------------------------------
+            container
+------------------------------ 
+*/
+.container {
+    background-color: #FFF4E0;
+    width: 100%;
+    height: 60px;
+}
+
+.container.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container img {
+    height: 60px;
+}
+
+.container ul {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.container ul li {
+    margin: auto 0;
+    position: relative;  
+}
+
+.container ul li a:hover {
+    color: #D2691E;
+}
+
+.container ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; 
+    width: 0;
+    height: 4px;
+    background-color:  #D2691E; 
+    border-radius: 15px;
+    transition: width 0.5s ease; 
+}
+
+.container ul li:nth-child(3)::after {
+    height: 0px;
+}
+
+.container ul li:hover::after {
+    width: 100%; /* ホバー時に幅を100%に拡大 */
+}
+
+/* 
+==========================
+        main
+==========================
+ */
+
+/* 
+-----------------------------
+            section
+-----------------------------
+ */
+section h2 {
+    color: #C4A484;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+section h2::after {
+    content:"";
+    display: block;
+    width: 100%;
+    border: 2px solid #D2691E;
+    border-radius: 15px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 
+--------------------------
+        concept
+-------------------------
+ */
+
+#concept{
+    margin:30px 0;
+}
+#concept img {
+    width: 55%;
+}
+
+.concept_flex {
+    display: flex;
+}
+
+.concept_text {
+    width: 40%;
+    padding: 10px 40px;
+}
+
+.concept_text h3 {
+    font-size: 1.5rem;
+    padding-bottom: 40px;
+    letter-spacing: 1.3px;
+}
+
+.concept_text p {
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.8px;
+}
+
+/* 
+--------------------------
+            menu
+------------------------- 
+*/
+
+.wave-base-point-1, .wave-base-point-2 {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+}
+
+.wave-image-1 {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wave-image-2{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rotated {
+    transform: rotate(180deg); /* 180度回転 */
+}
+
+
+
+
+#menu img {
+    max-width: 100%;
+}
+
+#menu p {
+    font-size: 1.2rem;
+    line-height: 2;
+    letter-spacing: 1.8px;
+}
+
+#menu,
+#recommend,
+#footer {
+    background-color: #FFF4E0;
+}
+
+
+/* 
+-------------------------
+recommend
+-------------------------
+ */
+.item_flex {
+    display: flex;
+    padding: 50px 0 40px;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.item_flex:nth-child(2n) {
+    padding-right: 15%;
+}
+
+.slide_in_right {
+    animation: slide-right 0.5s ease-out 0s 1 forwards;
+}
+
+.item_flex:nth-child(2n-1) {
+    padding-left: 15%;
+}
+
+.slide_in_left {
+    animation: slide-left 0.5s ease-out 0s 1 forwards;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.__slide_right,
+.__slide_left {
+    opacity: 0;
+}
+
+.circle {
+    width: 400px;
+    /* 円の直径 */
+    height: 400px;
+    /* 円の直径 */
+    background-color: #fff;
+    /* 白い背景色 */
+    border-radius: 50%;
+    /* 円形にする */
+    overflow: hidden;
+    /* 画像が円からはみ出ないようにする */
+    display: flex;
+    align-items: center;
+    /* 画像を垂直中央揃え */
+    justify-content: center;
+    /* 画像を水平中央揃え */
+}
+
+.circle img {
+    width: 90%;
+    height: 60%;
+    /* object-fit: cover; /* 画像を円形に合わせてトリミング */
+}
+
+.item_text {
+    width: 400px;
+    margin: auto 15px;
+}
+
+.item_text h3 {
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+    letter-spacing: 1.3px;
+}
+
+.item_text p {
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+    line-height: 2;
+}
+
+/* 
+---------------------
+        access
+---------------------
+ */
+.access_flex {
+    display: flex;
+    gap: 3rem;
+    height: 500px;
+}
+
+#map {
+    filter: grayscale(100%);
+    flex-grow: 2;
+}
+
+#map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.item_info {
+    margin: auto 30px;
+    flex-grow: 1;
+}
+
+.grid_list {
+    line-height: 1.5;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* 左にdt、右にdd */
+    gap: 15px 30px;
+}
+
+
+.item_info dt {
+    margin-top: 10px;
+    white-space: nowrap;
+}
+
+.item_info dd {
+    margin-top: 10px;
+}
+
+.item_info a {
+    text-decoration: none;
+}
+
+.item_info a:hover {
+    text-decoration: underline;
+}
+
+.item_info dt:first-of-type {
+    margin-top: 0;
+}
+
+.item_info dd:first-of-type {
+    margin-top: 0;
+}
+
+/* 
+=====================
+footer
+======================
+ */
+
+footer p {
+    height: 50px;
+    text-align: center;
+    color: #C4A484;
+    font-size: small;
+    padding: 20px 0;
+}
+
+
+/* ===========================
+        Media Queries
+=========================== */
+@media only screen and (max-width: 780px) {
+    body{
+        size: 0.6rem;
+    }
+    .concept_flex{
+        flex-direction: column;
+    }
+    #concept img{
+        width: 100%;
+    }
+    .concept_text{
+        width: 100%;
+    }
+    .concept_text h3{
+        padding-bottom:10px ;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+    .concept_flex p{
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+    .item_flex {
+        flex-direction: column;
+    }
+    .item_flex:nth-child(2n) {
+        padding-right: 0%;
+        flex-direction: column-reverse;
+    }
+    
+    
+    .item_flex:nth-child(2n-1) {
+        padding-left: 0%;
+    }
+}
+    
+/* スマートフォン用のレスポンシブデザイン (480px以下) */
+@media only screen and (max-width: 480px) {
+    #header {
+        height: auto;
+    }
+
+    h1 img {
+        height: 60px;
+    }
+
+    .sns {
+        justify-content: center;
+        padding: 10px 0;
+        position: relative;
+    }
+    .sns li img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .sns li {
+        padding: 0 10px;
+
+    }
+
+    .container, .container ul li a{
+        display: none;
+    }
+
+    .fade li img {
+        object-fit: contain;
+        height: auto;
+    }
+
+    #concept img {
+        width: 100%;
+    }
+
+    .concept_flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .concept_text {
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    #menu p,
+    .item_text p {
+        font-size: 1rem;
+    }
+
+    .item_flex {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .item_text {
+        width: 90%;
+    }
+
+    .access_flex {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .item_info {
+        margin: 20px 0;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
