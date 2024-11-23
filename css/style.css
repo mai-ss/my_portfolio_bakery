@@ -410,6 +410,7 @@ recommend
     display: flex;
     gap: 3rem;
     height: 500px;
+    padding-bottom: 50px;
 }
 
 #map {
