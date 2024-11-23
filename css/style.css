@@ -514,8 +514,18 @@ footer p {
     } 
     .access_flex {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
+        height: 700px;
     }
+
+    .item_info {
+        margin: 20px 0;
+    }
+    .grid_list {
+        line-height: 1.2rem;
+        gap: 10px 20px;
+    }
+    
 }
     
 /* スマートフォン用のレスポンシブデザイン (480px以下) */
