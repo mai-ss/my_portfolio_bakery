@@ -509,9 +509,12 @@ footer p {
         flex-direction: column-reverse;
     }
     
-    
     .item_flex:nth-child(2n-1) {
         padding-left: 0%;
+    } 
+    .access_flex {
+        flex-direction: column;
+        width: 90%;
     }
 }
     
@@ -590,6 +593,10 @@ footer p {
 
     .item_info {
         margin: 20px 0;
+    }
+    .grid_list {
+        line-height: 1.2;
+        gap: 10px 20px;
     }
 
     footer p {
