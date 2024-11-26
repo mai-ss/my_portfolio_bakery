@@ -77,3 +77,22 @@ $(document).ready(function(){
         $(window).trigger('scroll');
     });
     
+
+    $(document).ready(function () {
+        // アニメーションを適用する要素を取得
+        const fadeUpElements = $('.fadeup');
+    
+        // スクロールイベントを監視
+        $(window).on('scroll', function () {
+            fadeUpElements.each(function () {
+                const elementTop = $(this).offset().top; // 要素の上端位置
+                const windowBottom = $(window).scrollTop() + $(window).height(); // ウィンドウの下端位置
+    
+                // 要素が画面内に入ったらアニメーションを開始
+                if (windowBottom > elementTop + 30) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+    });
+    

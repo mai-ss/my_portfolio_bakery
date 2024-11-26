@@ -238,6 +238,10 @@ section h2::after {
 .fadeup{
     animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
+.fadeup.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @keyframes fadeup {
     0% {
