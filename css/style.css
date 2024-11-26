@@ -162,7 +162,7 @@ h1 img {
 
 .container ul li {
     margin: auto 0;
-    position: relative;  
+    position: relative;
 }
 
 .container ul li a:hover {
@@ -173,12 +173,12 @@ h1 img {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px; 
+    bottom: -2px;
     width: 0;
     height: 4px;
-    background-color:  #D2691E; 
+    background-color: #D2691E;
     border-radius: 15px;
-    transition: width 0.5s ease; 
+    transition: width 0.5s ease;
 }
 
 .container ul li:nth-child(3)::after {
@@ -186,7 +186,8 @@ h1 img {
 }
 
 .container ul li:hover::after {
-    width: 100%; /* ホバー時に幅を100%に拡大 */
+    width: 100%;
+    /* ホバー時に幅を100%に拡大 */
 }
 
 /* 
@@ -208,7 +209,7 @@ section h2 {
 }
 
 section h2::after {
-    content:"";
+    content: "";
     display: block;
     width: 100%;
     border: 2px solid #D2691E;
@@ -226,12 +227,34 @@ section h2::after {
 -------------------------
  */
 
-#concept{
-    margin:30px 0;
+#concept {
+    margin: 30px 0;
 }
+
 #concept img {
     width: 55%;
 }
+
+.fadeup{
+    animation: fadeup 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes fadeup {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .concept_flex {
     display: flex;
@@ -260,9 +283,10 @@ section h2::after {
 ------------------------- 
 */
 
-.wave-base-point-1, .wave-base-point-2 {
+.wave-base-point-1,
+.wave-base-point-2 {
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     width: 100%;
 }
 
@@ -275,14 +299,15 @@ section h2::after {
     display: block;
 }
 
-.wave-image-2{
+.wave-image-2 {
     width: 100%;
     height: auto;
     display: block;
 }
 
 .rotated {
-    transform: rotate(180deg); /* 180度回転 */
+    transform: rotate(180deg);
+    /* 180度回転 */
 }
 
 
@@ -481,38 +506,46 @@ footer p {
         Media Queries
 =========================== */
 @media only screen and (max-width: 780px) {
-    body{
+    body {
         size: 0.6rem;
     }
-    .concept_flex{
+
+    .concept_flex {
         flex-direction: column;
     }
-    #concept img{
+
+    #concept img {
         width: 100%;
     }
-    .concept_text{
+
+    .concept_text {
         width: 100%;
     }
-    .concept_text h3{
-        padding-bottom:10px ;
+
+    .concept_text h3 {
+        padding-bottom: 10px;
         font-size: 1.2rem;
         letter-spacing: 1px;
     }
-    .concept_flex p{
+
+    .concept_flex p {
         font-size: 1rem;
         letter-spacing: 1.5px;
     }
+
     .item_flex {
         flex-direction: column;
     }
+
     .item_flex:nth-child(2n) {
         padding-right: 0%;
         flex-direction: column-reverse;
     }
-    
+
     .item_flex:nth-child(2n-1) {
         padding-left: 0%;
-    } 
+    }
+
     .access_flex {
         flex-direction: column;
         width: 100%;
@@ -522,13 +555,14 @@ footer p {
     .item_info {
         margin: 20px 0;
     }
+
     .grid_list {
         line-height: 1.2rem;
         gap: 10px 20px;
     }
-    
+
 }
-    
+
 /* スマートフォン用のレスポンシブデザイン (480px以下) */
 @media only screen and (max-width: 480px) {
     #header {
@@ -544,7 +578,8 @@ footer p {
         padding: 10px 0;
         position: relative;
     }
-    .sns li img{
+
+    .sns li img {
         width: 20px;
         height: 20px;
     }
@@ -554,7 +589,8 @@ footer p {
 
     }
 
-    .container, .container ul li a{
+    .container,
+    .container ul li a {
         display: none;
     }
 
@@ -605,6 +641,7 @@ footer p {
     .item_info {
         margin: 20px 0;
     }
+
     .grid_list {
         line-height: 1.2;
         gap: 10px 20px;
