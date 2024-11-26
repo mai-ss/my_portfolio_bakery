@@ -245,23 +245,6 @@ section h2::after {
     transform: translateY(0);
 }
 
-/* @keyframes fadeup {
-    0% {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
-
 .concept_flex {
     display: flex;
 }
