@@ -336,7 +336,7 @@ recommend
 }
 
 .slide_in_right {
-    animation: slide-right 2s ease-out 0.2s 1 forwards;
+    animation: slide-right 1.5s ease-out 0s 1 forwards;
 }
 
 .item_flex:nth-child(2n-1) {
@@ -344,7 +344,7 @@ recommend
 }
 
 .slide_in_left {
-    animation: slide-left 2s ease-out 0.2s 1 forwards;
+    animation: slide-left 1.5s ease-out 0s 1 forwards;
 }
 
 @keyframes slide-right {
