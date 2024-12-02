@@ -32,9 +32,9 @@ $(document).ready(function(){
 
 // containerを上部に固定
 
-    $(function () {
-        var $container = $('.container'); // 対象のコンテナを指定
-        var containerOffset = $container.offset().top; // コンテナの初期位置を取得
+    $(document).ready(function() {
+        const $container = $('.container'); // 対象のコンテナを指定
+        const containerOffset = $container.offset().top; // コンテナの初期位置を取得
     
         $(window).on('scroll', function () {
             if ($(window).scrollTop() >= containerOffset) {

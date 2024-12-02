@@ -37,6 +37,9 @@ h1 {
 
 h1 img {
     max-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .sns {
@@ -499,6 +502,16 @@ footer p {
         size: 0.6rem;
     }
 
+    .fade li img {
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+    }
+
+    .container, .container.fixed{
+        display: none;
+    }
+
     .concept_flex {
         flex-direction: column;
     }
@@ -559,13 +572,15 @@ footer p {
     }
 
     h1 img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 60px;
     }
 
     .sns {
         justify-content: center;
-        padding: 10px 0;
-        position: relative;
+        padding-bottom: 10px;
     }
 
     .sns li img {
@@ -574,17 +589,17 @@ footer p {
     }
 
     .sns li {
-        padding: 0 10px;
+        padding: 35px 10px;
 
     }
 
-    .container,
-    .container ul li a {
+    .container, .container.fixed{
         display: none;
     }
 
     .fade li img {
         object-fit: contain;
+        width: 100%;
         height: auto;
     }
 
