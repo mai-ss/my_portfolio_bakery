@@ -37,7 +37,7 @@ $(document).ready(function(){
         const containerOffset = $container.offset().top; // コンテナの初期位置を取得
     
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() >= containerOffset) {
+            if ($(window).scrollTop() > containerOffset) {
                 $container.addClass('fixed'); // 固定用のクラスを追加
             } else {
                 $container.removeClass('fixed'); // 固定を解除

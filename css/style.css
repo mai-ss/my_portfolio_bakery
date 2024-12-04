@@ -147,7 +147,7 @@ h1 img {
 
 .container.fixed {
     position: fixed;
-    top: 0;
+    top: 0px;
     left: 0;
     width: 100%;
     z-index: 10;
@@ -526,8 +526,8 @@ footer p {
     }
     
     .fade li img {
-        width: 100vw;
-        height: 50vh;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
     }
     .container, .container.fixed{
@@ -619,10 +619,25 @@ footer p {
         display: none;
     }
 
-    .fade li img {
-        object-fit: contain;
+    .fade {
+        position: relative;
         width: 100%;
-        height: auto;
+        height: 300px;
+    }
+    
+    .fade li {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation: fade 25s infinite;
+    }
+    
+    .fade li img {
+        width: 100%;
+        height: 100%;
     }
 
     #concept img {
