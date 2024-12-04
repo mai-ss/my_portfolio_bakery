@@ -380,9 +380,11 @@ recommend
 }
 
 .circle {
-    width: 400px;
+    width: 25vw;
+    /* min-width: 300px; */
     /* 円の直径 */
-    height: 400px;
+    height: 25vw;
+    /* min-height: 300px; */
     /* 円の直径 */
     background-color: #fff;
     /* 白い背景色 */
