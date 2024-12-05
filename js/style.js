@@ -31,19 +31,46 @@ $(document).ready(function(){
 
 
 // containerを上部に固定
-
     $(document).ready(function() {
-        const $container = $('.container'); // 対象のコンテナを指定
-        const containerOffset = $container.offset().top; // コンテナの初期位置を取得
+        // ダミー要素作成
+        const $container = $('.container');
+        const containerHeight = $container.outerHeight();
+        const $placeholder = $('<div>').css({ height: containerHeight }).hide();
+        $container.before($placeholder);
     
+        let containerOffset = $container.offset().top;
+    
+        // ウィンドウのリサイズ時にoffsetと高さを再取得
+        $(window).on('resize', function() {
+            containerOffset = $container.offset().top;
+            $placeholder.css({ height: $container.outerHeight() });
+        });
+    
+        // スクロール時に固定処理
         $(window).on('scroll', function () {
-            if ($(window).scrollTop() > containerOffset) {
-                $container.addClass('fixed'); // 固定用のクラスを追加
+            if ($(window).scrollTop() >= containerOffset) {
+                $container.addClass('fixed');
+                // ダミーを配置
+                $placeholder.show();
             } else {
-                $container.removeClass('fixed'); // 固定を解除
+                $container.removeClass('fixed');
+                // ダミーを非表示
+                $placeholder.hide();
             }
         });
     });
+    // $(document).ready(function() {
+    //     const $container = $('.container'); // 対象のコンテナを指定
+    //     const containerOffset = $container.offset().top; // コンテナの初期位置を取得
+    
+    //     $(window).on('scroll', function () {
+    //         if ($(window).scrollTop() >= containerOffset) {
+    //             $container.addClass('fixed'); // 固定用のクラスを追加
+    //         } else {
+    //             $container.removeClass('fixed'); // 固定を解除
+    //         }
+    //     });
+    // });
 
 
 
@@ -77,6 +104,7 @@ $(document).ready(function(){
         $(window).trigger('scroll');
     });
     
+
 
     $(document).ready(function () {
         // アニメーションを適用する要素を取得
